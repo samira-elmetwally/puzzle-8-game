@@ -1,0 +1,18 @@
+Agent Design (PEAS)
+Agent: Image Puzzle Game (or Automated Puzzle Solver)
+
+Performance: Completed image, minimum number of moves, shortest time, high accuracy.
+Environment: 3x3 Grid board, scrambled image tiles, the empty slot, user interaction/mouse clicks.
+Actuators: Swapping tiles, updating the GUI display, showing "Win" messages, reset button.
+Sensors: Tile position detector (index), empty slot locator, mouse click listener, state comparator (comparing current state to goal state)
+
+
+
+Environment Properties (ODESDA)
+Project: Image Puzzle Game
+Observable: Fully Observable. The agent has access to the complete state of the board at all times; every tile's position and the empty slot are visible.
+Deterministic: Deterministic. The next state of the puzzle is completely determined by the current state and the specific move (action) made by the player.
+Episodic vs. Sequential: Sequential. Current actions (moves) affect future states. You can't solve the puzzle in one "episode"; it requires a sequence of steps to reach the goal.
+Static vs. Dynamic: Static. The environment (the tiles' positions) does not change while the agent/player is thinking or "deliberating" about the next move.
+Discrete vs. Continuous: Discrete. There is a limited and clearly defined number of moves (Up, Down, Left, Right) and a fixed number of tile positions.
+Agent: Single Agent. There is only one player or agent interacting with the environment to solve the puzzle.
